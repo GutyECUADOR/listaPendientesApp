@@ -1,5 +1,6 @@
 {
   "name": "listaPendientesApp",
   "integrations": {},
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "id": "f1ed6eb2"
 }
