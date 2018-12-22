@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Tareas Pendientes</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <img src="../../assets/imgs/pendientes.jpg">
+
+    <ion-list>
+        <button ion-item *ngFor="let lista of tareasService.listas">
+            {{ lista.titulo }}
+        </button>
+    </ion-list>
+
+    <ion-fab right bottom (click)="nuevaLista()">
+        <button ion-fab mini>
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+
+</ion-content>
