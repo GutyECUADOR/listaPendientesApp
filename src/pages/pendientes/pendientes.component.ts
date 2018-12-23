@@ -1,8 +1,8 @@
+import { Lista } from './../../models/lista.model';
 import { Component } from '@angular/core';
 import { TareasService } from '../../services/tareas.service';
-import { Lista } from "../../models/lista.model";
 import { NavController, AlertController  } from 'ionic-angular';
-import { NuevaListaPage } from '../nueva-lista/nueva-lista';
+import { EditListaPage } from '../edit-lista/edit-lista';
 
 
 @Component({
@@ -47,10 +47,10 @@ export class PendientesPage {
                             return;
                         }
                         
-                        this.navCtrl.push(NuevaListaPage, {
-                            titulo: data.titulo,
-                            isNueva: true
-                        });
+                        let lista = new Lista(data.titulo);
+                        this.tareasService.agregarLista(lista);
+                        this.tareasService.guardarStorage();
+                        this.editarLista(lista);
                     }
                 }
             ]
@@ -58,4 +58,11 @@ export class PendientesPage {
         prompt.present();
     }
 
+    editarLista(lista: Lista){
+        this.navCtrl.push(EditListaPage, {lista: lista});
+    }
+
+    eliminarLista(lista : Lista){
+        this.tareasService.eliminarLista(lista);
+    }
 }

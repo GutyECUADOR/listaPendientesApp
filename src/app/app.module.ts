@@ -12,7 +12,7 @@ import { TareasService } from '../services/tareas.service';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PendientesPage } from '../pages/pendientes/pendientes.component';
 import { TerminadosPage } from '../pages/terminados/terminados.component';
-import { NuevaListaPage } from '../pages/nueva-lista/nueva-lista';
+import { EditListaPage } from '../pages/edit-lista/edit-lista';
 
 
 @NgModule({
@@ -21,7 +21,7 @@ import { NuevaListaPage } from '../pages/nueva-lista/nueva-lista';
     TabsPage,
     PendientesPage,
     TerminadosPage,
-    NuevaListaPage
+    EditListaPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +33,7 @@ import { NuevaListaPage } from '../pages/nueva-lista/nueva-lista';
     TabsPage,
     PendientesPage,
     TerminadosPage,
-    NuevaListaPage
+    EditListaPage
   ],
   providers: [
     StatusBar,

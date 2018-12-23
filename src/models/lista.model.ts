@@ -8,7 +8,7 @@ export class Lista {
 
     constructor(titulo) {
         this.titulo = titulo;
-        this.id = new Date().getSeconds();
+        this.id = new Date().getTime();
         this.fechaINI = new Date();
         this.items = [];
         this.isComplete = false;
