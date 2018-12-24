@@ -1,3 +1,4 @@
+
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -8,11 +9,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 /* Servicios */
 import { TareasService } from '../services/tareas.service';
 
+/* Pipes */
+import { ListasCompletadasPipe } from '../pipes/listas-completadas/listas-completadas';
+
 /* Componentes */
 import { TabsPage } from '../pages/tabs/tabs';
 import { PendientesPage } from '../pages/pendientes/pendientes.component';
 import { TerminadosPage } from '../pages/terminados/terminados.component';
 import { EditListaPage } from '../pages/edit-lista/edit-lista';
+import { ListaComponent } from './../components/lista/lista';
 
 
 @NgModule({
@@ -21,7 +26,9 @@ import { EditListaPage } from '../pages/edit-lista/edit-lista';
     TabsPage,
     PendientesPage,
     TerminadosPage,
-    EditListaPage
+    EditListaPage,
+    ListasCompletadasPipe,
+    ListaComponent
   ],
   imports: [
     BrowserModule,

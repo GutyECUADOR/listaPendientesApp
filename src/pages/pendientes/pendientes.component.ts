@@ -4,7 +4,6 @@ import { TareasService } from '../../services/tareas.service';
 import { NavController, AlertController  } from 'ionic-angular';
 import { EditListaPage } from '../edit-lista/edit-lista';
 
-
 @Component({
     selector: 'page-home',
     templateUrl: 'pendientes.component.html'
@@ -58,11 +57,7 @@ export class PendientesPage {
         prompt.present();
     }
 
-    editarLista(lista: Lista){
-        this.navCtrl.push(EditListaPage, {lista: lista});
-    }
-
-    eliminarLista(lista : Lista){
-        this.tareasService.eliminarLista(lista);
+    editarLista(lista: Lista) {
+        this.navCtrl.push(EditListaPage, { lista: lista });
     }
 }
